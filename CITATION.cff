@@ -8,7 +8,7 @@ authors:
     given-names: Thanh Quang
   - family-names: Ngo
     given-names: Trung Kien
-repository-code: "https://github.com/<ORGANIZATION>/svc-gbr-rl-reproducibility"
+repository-code: "https://github.com/kotobuki09/svc-gbr-rl-reproducibility"
 license: MIT
 keywords:
   - SVC control

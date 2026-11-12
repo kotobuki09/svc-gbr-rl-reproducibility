@@ -24,6 +24,7 @@ REQUIRED_FILES = (
     "docs/DATA_ACCESS.md",
     "docs/LIMITATIONS.md",
     "docs/REPRODUCIBILITY.md",
+    "docs/REPOSITORY_PATTERNS.md",
     "docs/reviewer-data-note.md",
     "results/aggregate_metrics.csv",
     "results/ablation_summary.csv",

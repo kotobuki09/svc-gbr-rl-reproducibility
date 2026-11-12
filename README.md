@@ -33,6 +33,7 @@ Deep RL**.
 - Data dictionary and lineage statement in [`data/schema/`](data/schema/)
 - Public feature and metrics code in [`src/svc_release/`](src/svc_release/)
 - Reproducibility and limitation notes in [`docs/`](docs/)
+- Repository design rationale in [`docs/REPOSITORY_PATTERNS.md`](docs/REPOSITORY_PATTERNS.md)
 - Curated aggregate artifacts in [`results/`](results/)
 
 ### Restricted
@@ -91,6 +92,19 @@ tests/             public-boundary and deterministic behavior tests
    full data under the conditions in [`docs/DATA_ACCESS.md`](docs/DATA_ACCESS.md).
 
 Details are in [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md).
+
+## Results map
+
+| Paper-facing artifact | Public release location | Status |
+|---|---|---|
+| Model and RL aggregate metrics | [`results/aggregate_metrics.csv`](results/aggregate_metrics.csv) | Snapshot values; author confirmation required |
+| Feature ablation summary | [`results/ablation_summary.csv`](results/ablation_summary.csv) | Snapshot values; author confirmation required |
+| Figure/source mapping | [`results/figure_manifest.csv`](results/figure_manifest.csv) | Manifest only; figures not bundled yet |
+| Public schema and feature path | [`data/schema/`](data/schema/) and [`src/svc_release/`](src/svc_release/) | Public smoke-test path |
+
+The status labels are intentional. The current working directory contains
+conflicting result snapshots, so the repository does not silently promote one
+snapshot to the authoritative paper result.
 
 ## Citation
 

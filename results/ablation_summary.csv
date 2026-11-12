@@ -1,0 +1,8 @@
+removed_feature,rmse,r2,rmse_change,source_snapshot,scope,status,notes
+Qt,0.0628171639,0.8724389727,-0.0001234945,local:results/ablation_features.csv,internal_benchmark,author_confirmation_required,"Snapshot requires authoritative-run confirmation."
+Pt,0.0628567886,0.8722779924,-0.0000838639,local:results/ablation_features.csv,internal_benchmark,author_confirmation_required,"Snapshot requires authoritative-run confirmation."
+Qt_Pt_ratio,0.0635283806,0.8695341257,0.0005877222,local:results/ablation_features.csv,internal_benchmark,author_confirmation_required,"Snapshot requires authoritative-run confirmation."
+Qt_sq,0.0627582599,0.8726780899,-0.0001823985,local:results/ablation_features.csv,internal_benchmark,author_confirmation_required,"Snapshot requires authoritative-run confirmation."
+Pt_sq,0.0629617839,0.8718509448,0.0000211256,local:results/ablation_features.csv,internal_benchmark,author_confirmation_required,"Snapshot requires authoritative-run confirmation."
+Qt_Pt_interaction,0.0640440450,0.8674075283,0.0011033866,local:results/ablation_features.csv,internal_benchmark,author_confirmation_required,"Snapshot requires authoritative-run confirmation."
+Total_power,0.0628737254,0.8722091536,-0.0000669120,local:results/ablation_features.csv,internal_benchmark,author_confirmation_required,"Snapshot requires authoritative-run confirmation."

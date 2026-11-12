@@ -1,0 +1,7 @@
+field,datatype,unit,role,description,public_status
+record_id,string,none,identifier,Stable synthetic row identifier; not a source-record identifier,public
+Qt,float,arbitrary_demo_units,input,Synthetic reactive-power-like input used to illustrate the schema,public
+Pt,float,arbitrary_demo_units,input,Synthetic active-power-like input used to illustrate the schema,public
+Alpha_t,float,rad,target,Synthetic firing-angle-like target used to illustrate the schema,public
+source_type,string,none,provenance,Must be synthetic_demo for every public row,public
+split_role,string,none,metadata,Demo-only role label; not an independent evaluation claim,public

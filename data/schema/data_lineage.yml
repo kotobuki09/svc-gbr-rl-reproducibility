@@ -1,0 +1,36 @@
+schema_version: "0.1"
+release_status: draft
+public_sample:
+  path: data/sample/svc_demo_synthetic.csv
+  rows: 48
+  origin: deterministic_synthetic_generator
+  source_type: synthetic_demo
+  is_real_data_subset: false
+  license: CC-BY-4.0
+paper_data_layers:
+  parent_operational_records:
+    count: null
+    status: pending_author_confirmation
+    public: false
+  augmented_records:
+    count: null
+    status: pending_author_confirmation
+    public: false
+  training_records:
+    count: null
+    status: pending_author_confirmation
+    public: false
+  evaluation_records:
+    count: null
+    status: pending_author_confirmation
+    public: false
+evaluation_scope:
+  label: internal_benchmark
+  independent_out_of_sample_generalization_established: false
+  reason: training_and_evaluation_records_share_parent_scada_records
+pending_release_fields:
+  - authoritative_code_run
+  - authoritative_result_tables
+  - data_custodian_contact
+  - github_repository_url
+  - zenodo_doi

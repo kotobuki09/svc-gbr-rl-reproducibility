@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "SVC control research repository: public reproducibility companion"
+message: "If you use this repository, please cite the repository and the associated paper."
+type: software
+version: 0.1.0
+date-released: 2026-11-12
+authors:
+  - family-names: Nguyen
+    given-names: Thanh Quang
+  - family-names: Ngo
+    given-names: Trung Kien
+repository-code: "https://github.com/<ORGANIZATION>/svc-gbr-rl-reproducibility"
+license: MIT
+keywords:
+  - SVC control
+  - gradient boosting
+  - reinforcement learning
+  - power systems
+  - reproducibility
+  - synthetic data

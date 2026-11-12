@@ -1,0 +1,9 @@
+name: svc-gbr-rl-release
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - numpy>=1.24,<3
+  - pandas>=2.0,<3
+  - pyyaml>=6.0,<7
+  - pytest>=8,<9

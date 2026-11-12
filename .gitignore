@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+dist/
+build/
+*.egg-info/
+.superpowers/
+
+# Restricted or working-directory material must never enter this repository.
+data/raw/
+data/restricted/
+data/private/
+results/private/
+*.xlsx
+*.xls
+*.zip
+*.docx
+*.pdf
+*.log
+*.pkl
+*.joblib
+*.h5
+
+# Local smoke-test output is reproducible and should be regenerated.
+results/public_smoke_summary.json

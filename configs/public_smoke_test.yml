@@ -1,0 +1,5 @@
+schema_version: "0.1"
+sample_path: data/sample/svc_demo_synthetic.csv
+seed: 20261112
+expected_source_type: synthetic_demo
+expected_rows: 48

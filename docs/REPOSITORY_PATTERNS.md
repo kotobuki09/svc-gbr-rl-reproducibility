@@ -1,9 +1,9 @@
 # Repository design rationale
 
 This release follows patterns from established scientific software/data
-projects and official repository guidance. The source-backed research notes are
-kept in the workspace at
-`D:\HSB\AQuang\research_notes\repository_patterns.md`.
+projects and official repository guidance. The detailed research log is kept
+with the working project; the first-party sources used for this release are
+listed below so this document remains self-contained after cloning.
 
 ## Patterns adopted here
 

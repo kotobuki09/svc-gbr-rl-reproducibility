@@ -34,5 +34,5 @@ def summarize_demo(frame: pd.DataFrame) -> dict[str, Any]:
         "source_types": source_types,
         "evaluation_scope": "internal_benchmark",
         "independent_out_of_sample_generalization_established": False,
-        "data_checksum_sha256": checksum,
+        "canonical_csv_checksum_sha256": checksum,
     }

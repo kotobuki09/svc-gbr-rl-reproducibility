@@ -27,6 +27,8 @@ def engineer_features(frame: pd.DataFrame) -> pd.DataFrame:
     result["Qt_sq"] = result["Qt"] ** 2
     result["Pt_sq"] = result["Pt"] ** 2
     result["Qt_Pt_interaction"] = result["Qt"] * result["Pt"]
-    result["Qt_Pt_ratio"] = result["Qt"] / (result["Pt"] + 1e-12)
+    # Match the epsilon used by the local experiment scripts. This remains a
+    # public-demo transformation until the authoritative paper run is selected.
+    result["Qt_Pt_ratio"] = result["Qt"] / (result["Pt"] + 1e-6)
     result["Total_power"] = np.sqrt(result["Qt"] ** 2 + result["Pt"] ** 2)
     return result

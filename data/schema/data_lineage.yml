@@ -7,6 +7,8 @@ public_sample:
   source_type: synthetic_demo
   is_real_data_subset: false
   license: CC-BY-4.0
+  sha256: 4890e3d20e0c847e41016f14899f6e30482af5b29e030ecda31a0743c6264021
+checksums_file: data/schema/checksums.sha256
 paper_data_layers:
   parent_operational_records:
     count: null

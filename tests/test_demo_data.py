@@ -1,7 +1,7 @@
 import pandas as pd
 import pytest
 
-from svc_release.demo_data import generate_demo_frame
+from svc_release.demo_data import generate_demo_frame, validate_demo_frame
 
 
 EXPECTED_COLUMNS = [
@@ -47,3 +47,19 @@ def test_demo_sample_has_no_source_identifiers():
     assert frame["Qt"].between(20, 100).all()
     assert frame["Pt"].between(20, 100).all()
     assert frame["Alpha_t"].between(2.1, 3.2).all()
+
+
+def test_validate_demo_frame_rejects_out_of_range_values():
+    frame = generate_demo_frame(2)
+    frame.loc[0, "Qt"] = 999999
+
+    with pytest.raises(ValueError, match="Qt"):
+        validate_demo_frame(frame)
+
+
+def test_validate_demo_frame_rejects_missing_values():
+    frame = generate_demo_frame(2)
+    frame.loc[0, "Pt"] = float("nan")
+
+    with pytest.raises(ValueError, match="missing"):
+        validate_demo_frame(frame)

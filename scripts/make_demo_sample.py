@@ -16,7 +16,7 @@ OUTPUT = ROOT / "data" / "sample" / "svc_demo_synthetic.csv"
 def main() -> None:
     frame = generate_demo_frame()
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
-    frame.to_csv(OUTPUT, index=False)
+    frame.to_csv(OUTPUT, index=False, lineterminator="\n")
     print(f"wrote {len(frame)} synthetic rows to {OUTPUT.relative_to(ROOT)}")
 
 

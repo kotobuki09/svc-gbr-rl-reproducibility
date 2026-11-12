@@ -52,7 +52,9 @@ is a real-data subset.
 
 ```bash
 python -m pip install -r requirements.txt
-python scripts/run_public_smoke_test.py
+python scripts/run_public_smoke_test.py \
+  --output results/public_smoke_summary.json \
+  --features-output results/public_demo_features.csv
 python scripts/audit_public_release.py
 pytest -q
 ```
@@ -86,8 +88,9 @@ tests/             public-boundary and deterministic behavior tests
 
 1. **Public smoke test:** schema, provenance, feature engineering, and
    deterministic output shape run from the synthetic sample.
-2. **Public artifact review:** aggregate tables and figure metadata can be
-   inspected without row-level operational data.
+2. **Public demo artifact regeneration:** the synthetic feature artifact and
+   smoke summary can be rebuilt without row-level operational data; aggregate
+   paper tables remain inspection-only snapshots until confirmed.
 3. **Restricted-data reproduction:** a qualified researcher may request the
    full data under the conditions in [`docs/DATA_ACCESS.md`](docs/DATA_ACCESS.md).
 

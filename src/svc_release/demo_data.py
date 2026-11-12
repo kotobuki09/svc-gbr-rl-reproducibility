@@ -11,6 +11,9 @@ import numpy as np
 import pandas as pd
 
 
+PUBLIC_COLUMNS = ("record_id", "Qt", "Pt", "Alpha_t", "source_type", "split_role")
+
+
 def generate_demo_frame(n: int = 48, seed: int = 20261112) -> pd.DataFrame:
     """Return a deterministic, synthetic SVC-like demonstration frame."""
 
@@ -35,3 +38,28 @@ def generate_demo_frame(n: int = 48, seed: int = 20261112) -> pd.DataFrame:
             "split_role": "demo_only",
         }
     )
+
+
+def validate_demo_frame(frame: pd.DataFrame) -> None:
+    """Raise ``ValueError`` when a frame violates the public demo contract."""
+
+    missing_columns = [column for column in PUBLIC_COLUMNS if column not in frame.columns]
+    if missing_columns:
+        raise ValueError(f"missing required columns: {', '.join(missing_columns)}")
+    if frame.loc[:, PUBLIC_COLUMNS].isna().any().any():
+        raise ValueError("missing values are not allowed in the public demo sample")
+    for column in ("Qt", "Pt", "Alpha_t"):
+        if not pd.api.types.is_numeric_dtype(frame[column]):
+            raise ValueError(f"{column} must be numeric")
+    if not frame["record_id"].is_unique or not frame["record_id"].astype(str).str.fullmatch(r"demo-\d{4}").all():
+        raise ValueError("record_id must contain unique demo-#### identifiers")
+    if not frame["source_type"].eq("synthetic_demo").all():
+        raise ValueError("source_type must be synthetic_demo")
+    if not frame["split_role"].eq("demo_only").all():
+        raise ValueError("split_role must be demo_only")
+    if not frame["Qt"].between(20.0, 100.0).all():
+        raise ValueError("Qt is outside the documented demo range")
+    if not frame["Pt"].between(20.0, 100.0).all():
+        raise ValueError("Pt is outside the documented demo range")
+    if not frame["Alpha_t"].between(2.1, 3.2).all():
+        raise ValueError("Alpha_t is outside the documented demo range")

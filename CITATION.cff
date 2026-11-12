@@ -3,7 +3,6 @@ title: "SVC control research repository: public reproducibility companion"
 message: "If you use this repository, please cite the repository and the associated paper."
 type: software
 version: 0.1.0
-date-released: 2026-11-12
 authors:
   - family-names: Nguyen
     given-names: Thanh Quang

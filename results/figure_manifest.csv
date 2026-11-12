@@ -3,7 +3,7 @@ fig0,fig0_substation_diagram.png,system context,local:results/figures,planned_no
 fig1,fig1_data_distributions.png,data distribution,local:results/figures,planned_not_bundled,"Depends on authoritative data run."
 fig2,fig2_correlation_heatmap.png,feature correlation,local:results/figures,planned_not_bundled,"Depends on authoritative data run."
 fig3,fig3_model_comparison.png,model comparison,local:results/figures,planned_not_bundled,"Depends on authoritative data run."
-fig4,fig4_actual_vs_predicted.png,prediction diagnostics,local:results/figures,planned_not_bundled,"Depends on authoritative data run."
+fig4,fig5_actual_vs_predicted.png,prediction diagnostics,local:results/figures,planned_not_bundled,"Depends on authoritative data run."
 fig5,fig4_residual_distributions.png,residual diagnostics,local:results/figures,planned_not_bundled,"Depends on authoritative data run."
 fig6,fig_sl_vs_rl_comparison.png,supervised versus RL comparison,local:results/figures,planned_not_bundled,"Internal benchmark scope must remain visible."
 fig7,fig_rl_ablation.png,RL ablation,local:results/figures,planned_not_bundled,"Depends on authoritative data run."

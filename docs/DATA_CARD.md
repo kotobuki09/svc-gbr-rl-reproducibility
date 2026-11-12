@@ -33,6 +33,18 @@ mapping is restricted and is not reconstructed from the public demo.
 See [`data_dictionary.csv`](../data/schema/data_dictionary.csv). Values use
 engineering-style names from the paper, but the public values are synthetic.
 
+## Availability matrix
+
+| Logical input | Source/version | Availability | Terms | Affected outputs |
+|---|---|---|---|---|
+| Synthetic demo sample | This release, schema 0.1 | Public | CC BY 4.0 | Public smoke test and demo features |
+| Parent operational records | Author/data custodian; version pending | Restricted | Conditions set by custodian | Main paper benchmark |
+| Augmented records | Derived from parent records; authoritative run pending | Restricted | No redistribution | Training workflow and aggregate results |
+| Evaluation records | Derived/selected from parent records; authoritative run pending | Restricted | No redistribution | Reported internal benchmark |
+
+The restricted rows are represented by lineage metadata and aggregate snapshots
+only. They are not reconstructed from the public demo.
+
 ## Provenance
 
 Every demo row carries `source_type=synthetic_demo`. The demo has no station

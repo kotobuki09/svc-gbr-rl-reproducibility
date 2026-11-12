@@ -23,9 +23,7 @@ Run the public smoke test with `--features-output` to regenerate the public
 feature artifact and summary from the synthetic sample:
 
 ```bash
-python scripts/run_public_smoke_test.py \
-  --output results/public_smoke_summary.json \
-  --features-output results/public_demo_features.csv
+python scripts/run_public_smoke_test.py --output results/public_smoke_summary.json --features-output results/public_demo_features.csv
 ```
 
 Aggregate paper tables and the figure manifest are inspection-only snapshots

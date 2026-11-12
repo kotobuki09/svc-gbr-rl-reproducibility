@@ -52,9 +52,7 @@ is a real-data subset.
 
 ```bash
 python -m pip install -r requirements.txt
-python scripts/run_public_smoke_test.py \
-  --output results/public_smoke_summary.json \
-  --features-output results/public_demo_features.csv
+python scripts/run_public_smoke_test.py --output results/public_smoke_summary.json --features-output results/public_demo_features.csv
 python scripts/audit_public_release.py
 pytest -q
 ```
